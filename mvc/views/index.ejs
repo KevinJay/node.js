@@ -7,19 +7,10 @@
   <body>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <form action="/user/register" method="post">
-        <input type="text" name="username" /><br />
-        <input type="password" name="password" /><br />
-        <input type="password" name="pwdrepeat" /><br />
-        <input type="submit" name="submit" value="注册" />
-        <input type="reset" name="reset" value="重置" /><br />
-    </form>
-    <hr />
-    <form action="/user/login">
-        <input type="text" name="username" /><br />
-        <input type="password" name="password" /><br />
-        <input type="submit" name="submit" value="登录" />
-        <input type="reset" name="reset" value="重置" /><br />
-    </form>
+    <ul>
+        <li><a href="/user/index" title="注册新用户" target="_self">注册新用户</a></li>
+        <li><a href="/user/login" title="登录" target="_self">登录</a></li>
+        <li><a href="/user/" title="用户信息" target="_self">用户信息</a></li>
+    </ul>
   </body>
 </html>

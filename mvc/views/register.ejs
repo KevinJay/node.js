@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <div>
+        <ul>
+            <li><a href="/index" title="返回首页">首页</a></li>
+            <li><a href="/user/login" title="登录">登录</a></li>
+        </ul>
+    </div>
+    <div class="register" style="clear:both;">
+        <form action="/user/register" method="post">
+            <label>用户名：</label><input type="text" name="username" /><br />
+            <label>密码：</label><input type="password" name="password" /><br />
+            <label>确认密码：</label><input type="password" name="pwdrepeat" /><br />
+            <label>&nbsp;</label><input type="submit" name="submit" value="注册" />
+            <input type="reset" name="reset" value="重置" /><br />
+        </form>
+        <div class="showMessage"><%= showMessage %></div>
+    </div>
+  </body>
+</html>

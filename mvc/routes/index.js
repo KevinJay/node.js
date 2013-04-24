@@ -3,9 +3,8 @@
  *     尚未实现将日志记录插入到mongodb的功能
  */
 var url = require('url');
-var CONFIG = require('../config/config.js');
+var CONFIG = require('../config/sys.config.js');
 var fs = require('fs');
-require('../Helper/HelperString.js');
 exports.index = function(req,res){
     var currentURL = req.url;
     var urlStr = url.parse(currentURL).pathname;
@@ -23,7 +22,7 @@ exports.index = function(req,res){
         actionName = urlStrArray[urlStrArray.length-1] + 'Action';
     }
     try{
-        if(!fs.existsSync(controller)){
+        if(!fs.existsSync(controller)){ //fs.existsSync是同步
             throw '控制器不存在。controller:' + controller;
         }else{
             var ctl = require(controller);

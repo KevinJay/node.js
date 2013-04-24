@@ -10,3 +10,12 @@ p{
     color:green;
     font-weight:bold;
 }
+label{
+    width:100px; display:inline-block; text-align:right;
+}
+.register{
+    margin:0 auto;
+}
+ul, li{list-style-type:none;}
+ul li{float:left;margin-right:20px;}
+.showMessage{color:green; font-weight:bold;}
