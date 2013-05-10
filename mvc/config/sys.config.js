@@ -20,9 +20,9 @@ exports.ROOT_PATH = currentDir.slice(0, lastIndex);
  * @type {{host: string, user: string, password: string, database: string, charset: string}}
  */
 exports.dbConfig = {
-    'host':'192.168.12.216',
-    'user':'root',
-    'password':'r1234567',
+    'host':'127.0.0.1',
+    'user':'admin',
+    'password':'admin',
     'database':'nojsTest',
     'charset':'utf8'
 };
