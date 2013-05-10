@@ -25,7 +25,7 @@ CommonModel.prototype.configArray = '';
 /**
  * 初始化连接池和引入相关文件
  * @param configArray
- *      eg: configArray = {'host':'192.168.12.216', 'user':'root', 'password':'r1234567', 'database':'nojsTest'};
+ *      eg: configArray = {'host':'127.0.0.1', 'user':'admin', 'password':'admin', 'database':'nojsTest'};
  * @param callback
  */
 CommonModel.prototype.init = function(configArray){

@@ -23,10 +23,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sys.config.js" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="sys.config.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sys.config.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="17" selection-start="546" selection-end="546" vertical-scroll-proportion="-1.4152542">
+            <state line="23" column="17" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="common.model.js" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../model/common.model.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="80" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5179856">
               <folding />
             </state>
           </provider>
@@ -43,6 +52,7 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/sys.config.js" />
+        <option value="$PROJECT_DIR$/../model/common.model.js" />
       </list>
     </option>
   </component>
@@ -195,7 +205,14 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/sys.config.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="17" selection-start="546" selection-end="546" vertical-scroll-proportion="-1.4152542">
+        <state line="23" column="17" selection-start="546" selection-end="546" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../model/common.model.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="80" selection-start="788" selection-end="788" vertical-scroll-proportion="0.5179856">
           <folding />
         </state>
       </provider>
