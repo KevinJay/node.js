@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="/javascripts/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript">
+            function timing(id, count, url){
+                document.getElementById(id).innerText = count;
+                window.setTimeout(function(){
+                    count--;
+                    if(count > 0){
+                        timing(id, count, url);
+                    }else{
+                        location.href = url;
+                    }
+                }, 999);
+            }
+
+        $('#seconds').ready(function(){
+            timing('seconds', '<%= times %>', '<%= returnURL %>');
+        });
+    </script>
+  </head>
+  <body>
+
+   <div style="font-weight:bold; font-size:16px; color:green; margin-bottom: 10px; text-align:center;"><%= message %></div>
+   <div style="font-size:12px; margin:0 auto; text-align:center;">
+        系统会在<span id="seconds" style="color:green;">&nbsp;&nbsp;<%= times %>&nbsp;&nbsp;</span>秒后自动为您跳转到<a href="<%= returnURL %>" title="<%= title %>" target="_self"><%= title %></a>，
+        如果没有自动跳转，请点击<a href="<%= returnURL %>" title="<%= title %>" target="_self">这里</a>
+   </div>
+
+</html>

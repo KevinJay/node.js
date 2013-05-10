@@ -14,6 +14,15 @@ function ErrorController(req, res){
  * 404页面
  */
 ErrorController.prototype.page404 = function(){
-    this.res.render('error', {title:'404，页面不存在'});
+    this.res.render('page404', {title:'404，页面不存在'});
 }
+
+/**
+ * 自定义错误页面
+ * @param message
+ */
+ErrorController.prototype.indexAction = function(){
+    this.res.render('error', {title:'系统错误', errorMessage:'请联系网站管理员'});
+}
+
 

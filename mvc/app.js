@@ -6,7 +6,6 @@
 
 var express = require('express')
   , routes = require('./routes/index')
-  , user = require('./routes/user')
   , http = require('http')
   , path = require('path');
 
@@ -20,7 +19,13 @@ app.use(express.logger('dev'));
 app.use(express.bodyParser());
 app.use(express.methodOverride());
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(express.cookieParser());
+app.use(express.session({
+    secret:'poynt'
+}));
 app.use(app.router);  //必须入在express指定静态文件路径的后面，否则所有的静态文件会进行路由分发
+
 // development only
 if ('development' == app.get('env')) {
   app.use(express.errorHandler());

@@ -11,7 +11,7 @@ p{
     font-weight:bold;
 }
 label{
-    width:100px; display:inline-block; text-align:right;
+    width:100px; display:inline-block; text-align:right; margin-right:5px;
 }
 .register{
     margin:0 auto;
@@ -19,3 +19,6 @@ label{
 ul, li{list-style-type:none;}
 ul li{float:left;margin-right:20px;}
 .showMessage{color:green; font-weight:bold;}
+dl, dt, dd{margin:0px; padding:0px}
+dl dt, dl dd{margin-bottom:5px;}
+dl{font-weight:bold;}

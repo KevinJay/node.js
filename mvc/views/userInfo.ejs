@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p>Welcome to <%= title %></p>
+    <ul>
+        <li><a href="/" title="返回首页" target="_self">首页</a></li>
+        <li><a href="/user/logout" title="注销登录状态" target="_self">注销</a></li>
+        <li><a href="?a=edit" title="编辑个人信息" target="_self">编辑</a></li>
+        <li><a href="/user/delUser" title="删除用户" target="_self">删除</a></li>
+    </ul>
+    <div style="clear:both; margin-bottom:10px;"></div>
+    <% if (userInfoArray) { %>
+        <dl>
+            <dt>您的用户信息：</dt>
+            <% userInfoArray.forEach(function(item,index){ %>
+                <% if (a == 'edit') { %>
+                    <form method="post" action="/user/edit">
+                <% } %>
+                <dd><label>uid:</label><%= item.uid %></dd>
+                <dd>
+                    <label>userName:</label>
+                    <% if (a == 'edit') { %>
+                        <input type="text" name="username" value="<%= item.userName %>" />
+                    <% }else{ %>
+                        <%= item.userName %>
+                    <% } %>
+                </dd>
+                <dd>
+                    <label>fullName:</label>
+                    <% if (a == 'edit') { %>
+                        <input type="text" name="fullName" value="<%= item.fullName %>" />
+                    <% }else{ %>
+                        <%= item.fullName %>
+                    <% } %>
+                </dd>
+                <dd><label>roleID:</label><%= item.roleID %></dd>
+                <dd><label>createdDate:</label><%= item.createdDate %></dd>
+                <% if (a == 'edit') { %>
+                    <dd>
+                        <label>&nbsp;</label>
+                        <input type="submit" name="submit" value="更新" />
+                        <input type="submit" name="reset" value="重置" />
+                    </dd>
+                    </form>
+                <% } %>
+            <% }) %>
+        </dl>
+    <% } %>
+  </body>
+</html>

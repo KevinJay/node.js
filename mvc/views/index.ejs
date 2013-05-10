@@ -8,9 +8,15 @@
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
     <ul>
-        <li><a href="/user/index" title="注册新用户" target="_self">注册新用户</a></li>
+
         <li><a href="/user/login" title="登录" target="_self">登录</a></li>
-        <li><a href="/user/" title="用户信息" target="_self">用户信息</a></li>
+        <% if (isLogin == true) { %>
+            <li><a href="/u/<%= uid %>" title="个人主页" target="_self" >个人主页</a></li>
+            <li><a href="/user/logout" title="注销登录用户" target="_self">注销</a></li>
+            <li><a href="/user/delUser" title="删除用户" target="_self">删除</a></li>
+        <% }else{ %>
+            <li><a href="/user/index" title="注册新用户" target="_self">注册新用户</a></li>
+        <% } %>
     </ul>
   </body>
 </html>

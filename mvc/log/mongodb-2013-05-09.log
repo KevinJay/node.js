@@ -1,0 +1,6 @@
+初始化mongodb连接对象2013-05-09 17:13:44	初始化mongodb连接对象
+2013-05-09 17:14:36	初始化mongodb连接对象失败,error:Error: failed to connect to [127.0.0.1:27017]
+2013-05-09 17:20:39	初始化mongodb连接对象失败,error:Error: failed to connect to [127.0.0.1:27017]
+2013-05-09 17:24:15	初始化mongodb连接对象失败,error:Error: failed to connect to [127.0.0.1:27017]
+2013-05-09 17:27:57	初始化mongodb连接对象失败,Error: failed to connect to [127.0.0.1:27017]
+2013-05-09 17:27:57	日志入库失败，日志内容：{"log":"连接MYSQL出错","params":"","message":"ER_ACCESS_DENIED_ERROR: Access denied for user 'root'@'10.20.14.222' (using password: YES)","code":"ER_ACCESS_DENIED_ERROR","fatal":true,"create_time":"2013-05-09 17:27:56"},错误信息：Error: failed to connect to [127.0.0.1:27017]
