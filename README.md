@@ -1,12 +1,12 @@
 node.js mvc framework
-=======
+======
 	
 ### @version 1.0 
 	encapsulate routing layer, controller layer, model layer, view layer
 	封装路由、控制层（C），数据层（M），视图层（V）
 
 ### @version 2.0
-	1、
+	-
 		a) 路由分发的顺序是： 路由表规则  >  默认的URL拆分。 即先匹配路由表中的规则。所有的请求都走是app.all
 		注：路由表规则可以在“/mvc/routes/routes.map.js”文件中自由添加或删除。   
 		    添加此功能的考虑是为了使URL更简短更好看，也利于SEO。
@@ -14,14 +14,12 @@ node.js mvc framework
 		   index做action。 index也可以省略，默认的action即为indexAction。即“[http://localhost:3000/user/index](http://localhost:3000/user/index)”和
 		   “[http://localhost:3000/user/](http://localhost:3000/user/)”和“[http://localhost:3000/sasas/fasasdf/user/index](http://localhost:3000/sasas/fasasdf/user/index)”会分发到同一控制器的同一个action里面。
 		   
-	2、 控制器的分发顺序是: 钩子类控制器(hook)  >  普通控制器(controller)
+	- 控制器的分发顺序是: 钩子类控制器(hook)  >  普通控制器(controller)
 	
-	3、 日志记录模块的顺序是：mongodb > 文件日志 > 终端。  即先将日志记录到mongodb库里；若操作失败，再记录到日志文件里；
-	         若也操作失败，直接在终端打印出来。
+	- 日志记录模块的顺序是：mongodb > 文件日志 > 终端。  即先将日志记录到mongodb库里；若操作失败，再记录到日志文件里；
+               若也操作失败，直接在终端打印出来。
 	
-	4、 MODEl层是用类似于PDO的预处理形式来封装的。
-	
-<hr />
+	- MODEl层是用类似于PDO的预处理形式来封装的。
 
 ### The problems in the development:
 	- 静态文件（如CSS文件，图片文件等等）请求服务器时，也进入了路由分发控制里。
@@ -50,19 +48,14 @@ node.js mvc framework
 	 
 		现在系统中，如果一段时间之后不进行任何操作，还是会报这个错误，但是又不影响系统运行。
 		有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题（[https://github.com/visionmedia/express/issues/751](https://github.com/visionmedia/express/issues/751)）。
-
-### 链接
-	1.		[点击这里你可以链接到www.google.com](http://www.google.com)
-		
-<hr />
 		
 ### My opinion:
-	1、node.js 的性能非常好，请求和响应速度都非常快，MODEL层应该封装成 ORM 框架能更好
+	- node.js 的性能非常好，请求和响应速度都非常快，MODEL层应该封装成 ORM 框架能更好
 	        的体现出 node.js 的性能优势（系统中暂时是用的PDO形式）。
 	
-	2、用 javascript 的面向对象来编写，更能节省系统资源开支和代码重用。
+	- 用 javascript 的面向对象来编写，更能节省系统资源开支和代码重用。
 	
-	3、钩子类控制器（hook）用于处理特殊情况下的 action 
+	- 钩子类控制器（hook）用于处理特殊情况下的 action 
 
 
 
