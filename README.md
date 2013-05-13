@@ -24,14 +24,14 @@ node.js mvc framework
 <hr />
 
 ### The problems in the development:
-	1、静态文件（如CSS文件，图片文件等等）请求服务器时，也进入了路由分发控制里。
+	- 静态文件（如CSS文件，图片文件等等）请求服务器时，也进入了路由分发控制里。
 		解决方案：将“app.use(express.static(path.join(__dirname, 'public'))); ”放在“app.use(app.router); ”之前即可。
 		解决方法很简单，却困扰了我两天。囧。
 		
-	2、 MODEL层做压力测试时，并发100就失败了。
+	- MODEL层做压力测试时，并发100就失败了。
 		解决方案：用 node-mysql 自带的连接池封装下 mysql连接对象 即可。
 		
-	3、 系统一段时间不进行任何操作，mysql连接对象自动断开，引发node.js终止运行。
+	- 系统一段时间不进行任何操作，mysql连接对象自动断开，引发node.js终止运行。
 		解决方案：用 mysql连接对象的事件监听来处理。 
 		mysqlObject.on('error', function(error){
 			if(error){
@@ -39,10 +39,10 @@ node.js mvc framework
 			}
 		}) 
 		
-	4、 EventEMitter的事件监听内存溢出。
+	- EventEMitter的事件监听内存溢出。
 		解决方案：用 emitter.setMaxListeners()  设置最大监听数
 		
-	5、 程序报：Can't set headers after they are sent  的错误
+	- 程序报：Can't set headers after they are sent  的错误
 		解决方案：（这个解决方案是纯个人理解）
 		问题是由于服务器给浏览器发送了响应数据后，又继续发送header头部数据引起的。在每次
 		向浏览器发送数据时（res.render、res.redirect等等)，在前边加个 “return”,即“return res.redirect(...)”
