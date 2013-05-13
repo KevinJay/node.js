@@ -49,8 +49,8 @@ node.js mvc framework
 		在一个function内，调用callback时，最好也 return 一次 ---> return callback(error, result);
 	 
 		现在系统中，如果一段时间之后不进行任何操作，还是会报这个错误，但是又不影响系统运行。
-		有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题（[The Wiki](https://github.com/joyent/node/wiki)
-		[https://github.com/visionmedia/express/issues/751](https://github.com/visionmedia/express/issues/751)）。
+		有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题（[https://github.com/visionmedia/express/issues/751](https://github.com/visionmedia/express/issues/751)）。
+		[test](http://test.com)
 		
 <hr />
 		
