@@ -39,8 +39,6 @@ node.js mvc framework
 		有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题(https://github.com/visionmedia/express/issues/751）。
 
 ### My opinion:
-	1、node.js 的性能非常好，请求和响应速度都非常快，MODEL层应该封装成 ORM 框架能更好的体现出 node.js 的性能优势（系统中暂时是用的PDO形式）。
-	
-	2、用 javascript 的面向对象来编写，更能节省系统资源开支和代码重用。
-	
-	3、钩子类控制器（hook）用于处理特殊情况下的 action 	
+- node.js 的性能非常好，请求和响应速度都非常快，MODEL层应该封装成 ORM 框架能更好的体现出 node.js 的性能优势（系统中暂时是用的PDO形式）。
+- 用 javascript 的面向对象来编写，更能节省系统资源开支和代码重用。
+- 钩子类控制器（hook）用于处理特殊情况下的 action 	
