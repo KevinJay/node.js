@@ -13,7 +13,8 @@ node.js mvc framework
 
 ### The problems in the development:
 	1、静态文件（如CSS文件，图片文件等等）请求服务器时，也进入了路由分发控制里。
-		解决方案：将“app.use(express.static(path.join(__dirname, 'public'))); ”放在“app.use(app.router); ”之前即可。解决方法很简单，却困扰了我两天。。
+		解决方案：将“app.use(express.static(path.join(__dirname, 'public'))); ”放在“app.use(app.router); ”之前即可。
+		解决方法很简单，却困扰了我两天。。
 		
 	2、MODEL层做压力测试时，并发100就失败了。
 		解决方案：用 node-mysql 自带的连接池封装下 mysql连接对象 即可。
@@ -34,7 +35,12 @@ node.js mvc framework
 		问题是由于服务器给浏览器发送了响应数据后，又继续发送header头部数据引起的。在每次
 		向浏览器发送数据时（res.render、res.redirect等等)，在前边加个 “return”,即“return res.redirect(...)”
 		在一个function内，调用callback时，最好也 return 一次 ---> return callback(error, result);
-		现在系统中，如果一段时间之后不进行任何操作，还是会报这个错误，但是又不影响系统运行。有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题([https://github.com/visionmedia/express/issues/751](https://github.com/visionmedia/express/issues/751)）。
+		现在系统中，如果一段时间之后不进行任何操作，还是会报这个错误，但是又不影响系统运行。
+		有外国朋友说这个是node core 的BUG。0.8的版本不会出现此问题(https://github.com/visionmedia/express/issues/751）。
 
 ### My opinion:
-		
+	1、node.js 的性能非常好，请求和响应速度都非常快，MODEL层应该封装成 ORM 框架能更好的体现出 node.js 的性能优势（系统中暂时是用的PDO形式）。
+	
+	2、用 javascript 的面向对象来编写，更能节省系统资源开支和代码重用。
+	
+	3、钩子类控制器（hook）用于处理特殊情况下的 action 	
