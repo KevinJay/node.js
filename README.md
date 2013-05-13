@@ -5,11 +5,11 @@ node.js mvc framework
 
 <hr />
 	
-@version 1.0 
+### @version 1.0 
 	encapsulate routing layer, controller layer, model layer, view layer
 	封装路由、控制层（C），数据层（M），视图层（V）
 
-@version 2.0
+### @version 2.0
 	1、
 		a) 路由分发的顺序是： 路由表规则  >  默认的URL拆分。 即先匹配路由表中的规则。所有的请求都走是app.all
 		注：路由表规则可以在“/mvc/routes/routes.map.js”文件中自由添加或删除。   
@@ -26,7 +26,7 @@ node.js mvc framework
 	
 <hr />
 
-The problems in the development:
+### The problems in the development:
 	1、静态文件（如CSS文件，图片文件等等）请求服务器时，也进入了路由分发控制里。
 		解决方案：将“app.use(express.static(path.join(__dirname, 'public'))); ”放在“app.use(app.router); ”之前即可。
 		解决方法很简单，却困扰了我两天。囧。
