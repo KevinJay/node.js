@@ -3,6 +3,9 @@ node.js mvc framework
 
 ### 交流讨论请加QQ群：158587573（湖南高端WEB技术交流群）
 
+### 系统说明：
+	系统是用 node.js + mysql(存储业务数据) + mongodb(存储日志记录) + redis(存储会话数据) 来搭建的。
+
 ### @version 1.0
 - encapsulate routing layer, controller layer, model layer, view layer ---> 封装路由，控制层（C），数据层（M），视图层（V）
 	
