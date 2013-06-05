@@ -9,7 +9,7 @@ node.js mvc framework
 - express已经安装在node_modules目录下，默认模板是使用的ejs。
 - 所需环境配好后，请修改  '/config/sys.config.js' 文件里相应的配置信息
 - 系统中使用到的mysql表结构为：
-	create table `t_user` (
+	create table `t_user` ( 
 		`uid` double ,
 		`userName` varchar (150),
 		`pass` varchar (300),
