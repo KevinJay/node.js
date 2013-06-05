@@ -4,20 +4,20 @@ node.js mvc framework
 ### 交流讨论请加QQ群：158587573（湖南高端WEB技术交流群）
 
 ### 系统说明：
-- 系统是用 node.js(version:0.10.1) + express(version:3.1.1) + mysql(存储业务数据) + mongodb(存储日志记录) + redis(存储会话数据) 来搭建的。
-- 运行之前所需环境：node.js、redis和mysql。其中，在node_modules目录下已经安装了redis和mysql的驱动，但是还需要安装相应的客户端软件。
-- express已经安装在node_modules目录下，默认模板是使用的ejs。
-- 所需环境配好后，请修改  '/config/sys.config.js' 文件里相应的配置信息
-- 系统中使用到的mysql表结构为：
-	create table `t_user` (
-		`uid` double ,
-		`userName` varchar (150),
-		`pass` varchar (300),
-		`pass_salt` varchar (150),
-		`fullName` varchar (150),
-		`roleID` double ,
-		`createdDate` datetime 
-	); 
+	1、系统是用 node.js(version:0.10.1) + express(version:3.1.1) + mysql(存储业务数据) + mongodb(存储日志记录) + redis(存储会话数据) 来搭建的。
+	2、运行之前所需环境：node.js、redis和mysql。其中，在node_modules目录下已经安装了redis和mysql的驱动，但是还需要安装相应的客户端软件。
+	3、express已经安装在node_modules目录下，默认模板是使用的ejs。
+	4、所需环境配好后，请修改  '/config/sys.config.js' 文件里相应的配置信息
+	5、系统中使用到的mysql表结构为：
+		create table `t_user` (
+			`uid` double ,
+			`userName` varchar (150),
+			`pass` varchar (300),
+			`pass_salt` varchar (150),
+			`fullName` varchar (150),
+			`roleID` double ,
+			`createdDate` datetime 
+		); 
 	
 
 ### @version 1.0
