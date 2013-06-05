@@ -10,7 +10,7 @@ node.js mvc framework
 - 所需环境配好后，请修改  '/config/sys.config.js' 文件里相应的配置信息。
 - 系统中使用到的mysql表结构为：<br />
 	create table `t_user` (<br />
-		\t`uid` double ,<br />
+		&nbps;&nbsp;&nbps;&nbsp;`uid` double ,<br />
 		`userName` varchar (150),<br />
 		`pass` varchar (300),<br />
 		`pass_salt` varchar (150),<br />
