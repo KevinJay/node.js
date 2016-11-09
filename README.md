@@ -1,6 +1,8 @@
 node.js mvc framework
 =====
 
+### 此项目已不再更新，请知悉~
+
 ### 系统说明：
 - 系统是用node.js(version:0.10.1) + express(version:3.1.1) + mysql(存储业务数据) + mongodb(存储日志记录) + redis(存储会话数据) 来搭建的。
 - 运行之前所需环境：node.js、redis和mysql。其中，在node_modules目录下已经安装了redis和mysql的驱动，但是还需要安装相应的客户端软件。
